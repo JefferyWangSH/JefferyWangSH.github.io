@@ -19,7 +19,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently a PhD student major in condensed matter theory in the Department of Physics, Fudan University, Shanghai, China. :sunglasses:
+I am currently a PhD student major in condensed matter theory at the Department of Physics, Fudan University, Shanghai, China. :sunglasses:
+
+$$
+\left|\Psi\right\rangle = \frac{1}{\sqrt{2}} \left(\ \left|\ \text{Theory}\ \right\rangle + \left|\ \text{Numeric}\ \right\rangle\ \right).
+$$
 
 My academic efforts are mainly concentrated on *studying highly-correlated quantum systems* with both *analytical and numerical techniques*.
 
