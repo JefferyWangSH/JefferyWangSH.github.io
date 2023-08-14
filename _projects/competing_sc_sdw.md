@@ -4,7 +4,7 @@ title: Competing SC & SDW
 description: Note for the multichannel BdG diagonalization.
 img: assets/img/multichannel_bdg.svg
 importance: 1
-category: Notes
+category: Invisible
 related_publications:
 ---
 
