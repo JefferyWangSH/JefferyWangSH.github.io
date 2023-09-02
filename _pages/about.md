@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>PhD student</a> / Condensed Matter Theory and Numerics.
+subtitle: <a href='#'>PhD student / Condensed Matter Theory and Numerics.</a>
 
 profile:
   align: right
@@ -29,7 +29,8 @@ My current academic efforts are mainly concentrated on *studying highly-correlat
 
 To get access to my published works, just go to <a href='/publications'>Publications</a>.
 
-I plan to keep learning and uploading my notes to this website, which may cover varying topics on condensed matter theory.
-And I will also share my codes on simulating quantum systems via my [Github account](https://github.com/JefferyWangSH).
+I intend to share my notes on learning condensed matter theory and other topics through this website.
+Additionally, I will make my codes on simulating quantum systems available through my [Github account](https://github.com/JefferyWangSH).
 
-Feel free to contact me and hope we can learn and benefit together! :wave:
+Don’t hesitate to reach out to me.
+Hope we can learn from each other and benefit from our interactions! :wave:

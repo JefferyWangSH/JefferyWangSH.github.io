@@ -8,9 +8,10 @@ nav: true
 nav_order: 3
 ---
 
-My github account is [JefferyWangSH](https://github.com/JefferyWangSH), where I occasionally upload some basic algorithms used in the field of condensed matter physics.
+My github account is [JefferyWangSH](https://github.com/JefferyWangSH),
+where I will share fundamental algorithms that are commonly used and well regarded within the community of condensed matter physics.
 
-Some of my focused numerical methods include *determinant quantum Monte Carlo (DQMC)* and its projector version (PQMC) for studying *highly-correlated fermionic systems*.
+Some of my focused numerical methods include *determinant quantum Monte Carlo (DQMC)* and its projective version (PQMC) for studying *highly-correlated fermionic quantum systems*.
 
 ## GitHub Stats
 
