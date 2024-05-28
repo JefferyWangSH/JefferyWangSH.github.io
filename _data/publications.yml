@@ -1,22 +1,19 @@
 main:
 
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+  - title: 'The interplay of phase fluctuations and nodal quasiparticles: ubiquitous Fermi arcs in two-dimensional d-wave superconductors'
+    authors: <strong>Xu-Cheng Wang</strong>, Xiao Yan Xu*, Yang Qi**
+    journal_short: arXiv
+    journal: 	arXiv:2310.05376
+    url: https://arxiv.org/abs/2310.05376
+    pdf: https://arxiv.org/pdf/2310.05376
+    image: ./assets/img/cover_fermi_arcs.png
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    # notes: Early Accept
 
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+  - title: Phase fluctuations in two-dimensional superconductors and pseudogap phenomenon
+    authors: <strong>Xu-Cheng Wang</strong>, Yang Qi*
+    journal_short: PRB
+    journal: Phys. Rev. B <strong>107</strong>, 224502, (2023)
+    url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.224502
+    pdf: https://arxiv.org/pdf/2212.05737
+    image: ./assets/img/cover_pseudogap.png

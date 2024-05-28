@@ -1,4 +1,6 @@
-<h2 id="publications" style="margin: 2px 0px -15px;">Publications</h2>
+<h1 id="publications"></h1>
+
+<h2 style="margin: 2px 0px -15px;">Publications <temp style="font-size:15px;">[</temp><a href="https://scholar.google.com/citations?user=aK9x54UAAAAJ" target="_blank" style="font-size:15px;">Google Scholar</a><temp style="font-size:15px;">]</temp><temp style="font-size:15px;">[</temp><a href="https://orcid.org/0000-0002-8651-3995" target="_blank" style="font-size:15px;">ORCID</a><temp style="font-size:15px;">]</temp></h2>
 
 <div class="publications">
 <ol class="bibliography">
@@ -11,14 +13,14 @@
     {% if link.image %} 
     <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width=100;height=40%">
     {% endif %}
-    {% if link.conference_short %} 
-    <abbr class="badge">{{ link.conference_short }}</abbr>
+    {% if link.journal_short %} 
+    <abbr class="badge">{{ link.journal_short }}</abbr>
     {% endif %}
   </div>
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-      <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
+      <div class="title"><a href="{{ link.url }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
-      <div class="periodical"><em>{{ link.conference }}</em>
+      <div class="periodical"><em>{{ link.journal }}</em>
       </div>
     <div class="links">
       {% if link.pdf %} 
