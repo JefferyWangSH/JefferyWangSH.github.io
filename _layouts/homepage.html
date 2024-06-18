@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>{{ site.title }} | {{site.affiliation}}</title>
+    <title>{{ site.title }}'s Homepage</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -146,6 +146,18 @@
       {{ content }}
 
       <br>
+
+      {% if site.enable_last_update %}
+      <small>Last Update:
+            <script>
+              const monthNames = ["January", "Februray", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+              ];
+              var modiDate = new Date(document.lastModified);
+              var showAs = monthNames[modiDate.getMonth()] + " " + modiDate.getDate() + ", " + " " + modiDate.getFullYear() + ".";
+              document.write(showAs);
+            </script>
+      </small>
+      {% endif %}
 
       {% if site.enable_footnote %}
       <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
