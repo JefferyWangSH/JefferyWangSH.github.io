@@ -6,6 +6,10 @@ layout: homepage
 
 ## About Me
 
+<div style="text-align: center;">
+  <img src="assets/img/wordcloud.png" alt="wordcloud" style="width: 88%; display: inline-block; margin-bottom: 20px;">
+</div>
+
 I am currently a PhD student, major in *condensed matter theory*, at the Department of Physics, Fudan University, Shanghai, China.
 
 My research focus on *exploring novel phenomena in highly-correlated many-body systems* with both *analytical and numerical techniques*.
