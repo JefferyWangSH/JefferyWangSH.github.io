@@ -14,7 +14,7 @@ description: Xu-Cheng Wang is a PhD student at Fudan University, Shanghai, China
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
-cv_link: assets/files/curriculum_vitae.pdf
+cv_link: ./assets/files/cv.pdf
 google_scholar: https://scholar.google.com/citations?user=aK9x54UAAAAJ
 github_link: https://github.com/JefferyWangSH
 # linkedin: https://www.linkedin.com/

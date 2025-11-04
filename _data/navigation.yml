@@ -13,9 +13,12 @@ main:
   # - title: "Teaching"
   #  url: ./#teaching
 
+  - title: "CV"
+    url: ./assets/files/cv.pdf
+    right: true
+
   - title: "Publications"
     url: ./#publications
-    right: true
 
   #- title: "News"
   #  url: ./#news
