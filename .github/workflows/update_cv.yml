@@ -1,0 +1,37 @@
+name: update CV from private repo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Checkout private CV repo
+        uses: actions/checkout@v4
+        with:
+          repository: 'JefferyWangSH/cv'
+          token: ${{ secrets.PAT }}
+          path: 'mycv'
+
+      - name: Copy latest CV
+        run: |
+          cp mycv/cv_tech_combined.pdf assets/files/cv.pdf
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          if [[ -n $(git status -s) ]]; then
+            git add assets/files/cv.pdf
+            git commit -m "automated cv update."
+            git push https://x-access-token:${{ secrets.PAT }}@github.com/JefferyWangSH/JefferyWangSH.github.io.git HEAD:main
+          else
+            echo "no changes to commit."
+          fi

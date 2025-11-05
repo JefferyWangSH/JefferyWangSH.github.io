@@ -7,12 +7,15 @@ layout: homepage
 ## About Me
 
 <div style="text-align: center;">
-  <img src="assets/img/wordcloud.png" alt="wordcloud" style="width: 90%; display: inline-block; margin-bottom: 20px;">
+  <img src="assets/img/wordcloud.png" alt="wordcloud" style="width: 95%; display: inline-block; margin-bottom: 20px;">
 </div>
 
-I am currently a PhD student, major in *condensed matter theory*, at the Department of Physics, Fudan University, Shanghai, China.
+I am currently a PhD candidate, specializing in *condensed matter theory*,
+at the Department of Physics, Fudan University in Shanghai, China.
 
-My research focus on *exploring novel phenomena in correlated many-body systems* with both *analytical and numerical techniques*.
+My research focuses on exploring quantum states of matter,
+such as *high-temperature superconductors and quantum Hall systems*,
+through a combination of *analytical and numerical approaches*.
 
 <!-- ## Research Interests
 
