@@ -28,8 +28,8 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          if [[ -n $(git status -s) ]]; then
-            git add assets/files/cv.pdf
+          git add assets/files/cv.pdf
+          if ! git diff --staged --quiet; then
             git commit -m "automated cv update."
             git push https://x-access-token:${{ secrets.PAT }}@github.com/JefferyWangSH/JefferyWangSH.github.io.git HEAD:main
           else
