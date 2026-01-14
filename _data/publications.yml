@@ -2,11 +2,11 @@ main:
 
   - title: 'The interplay of phase fluctuations and nodal quasiparticles: ubiquitous Fermi arcs in two-dimensional d-wave superconductors'
     authors: <strong>Xu-Cheng Wang</strong>, Xiao Yan Xu*, Yang Qi**
-    journal_short: arXiv
-    journal: 	arXiv:2310.05376
-    url: https://arxiv.org/abs/2310.05376
+    journal_short: Sci. Bull.
+    journal: 	Sci. Bull. <strong>71</strong>, 36-39, (2026)
+    url: https://www.sciencedirect.com/science/article/pii/S2095927325011223
     pdf: https://arxiv.org/pdf/2310.05376
-    image: ./assets/img/cover_fermi_arcs.png
+    image: ./assets/img/cover_pdsc_fermi_arcs.png
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     # notes: Early Accept
 
@@ -16,4 +16,4 @@ main:
     journal: Phys. Rev. B <strong>107</strong>, 224502, (2023)
     url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.224502
     pdf: https://arxiv.org/pdf/2212.05737
-    image: ./assets/img/cover_pseudogap.png
+    image: ./assets/img/cover_pdsc_pg.png
