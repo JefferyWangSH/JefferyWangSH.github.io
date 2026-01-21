@@ -18,6 +18,7 @@ jobs:
         with:
           repository: 'JefferyWangSH/cv'
           token: ${{ secrets.PAT }}
+          ref: 'tech-base'
           path: 'mycv'
 
       - name: Copy latest CV
