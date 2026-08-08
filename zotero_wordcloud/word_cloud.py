@@ -1,0 +1,178 @@
+import argparse
+import re
+import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud, ImageColorGenerator
+import pandas as pd
+from PyPDF2 import PdfReader
+
+stop_words = [
+    "of", "the", "and", "a", "an",
+    "in", "for", "to", "is", "by", "this",
+    "as", "are", "with", "that", "from",
+    "on", "oxford", "handbook", "we", "between",
+    "how", "using", "", "can", "it", "new", "-",
+    "international", "conference", "be", "role",
+    "has", "two", "through", "der", "which",
+    "some", "its", "not", "towards",
+    "introduction", "paper", "proceedings", "their", "und", "or",
+    "more", "about", "one", "these", "have", "beyond", "use", "used",
+    "different", "other", "most", "", "within", "across", "2021", "than",
+    "cambridge", "into", "first", "at", "our", "https", "http", "doi", "pp", "et", "e. g.",
+    "e.g.", "io", "pp.", "th", "mj", "css", "no.", "al.",
+    "such", "also", "but", "they", "vol", "(pp", "all", "was", "r2", "ch", "pdf",
+    "much",
+
+    "method", "methods", "model", "models", "non-hermitian", "field",
+    "states", "effect", "properties", "system", "systems",
+    ]
+
+custom_mappings = {
+    # "studies": "study",
+    # '"music,music"' : "music",
+    # "musical" : "music",
+    # "harmonic" : "harmony",
+    # "music psychology" : "psychology",
+    # "music theory" : "theory",
+    # "music perception" : "perception",
+    # "music cognition" : "cognition",
+    # "cognitive" : "cognition",
+    # "modelling" : "modeling",
+    # "syntactic" : "syntax",
+    # "theory,music": "music theory",
+    # "theories" : "theory",
+    # "sciences" : "science",
+    # "melodies" : "melody",
+    # "concepts" : "concept",
+    # "nir" : "mir"
+
+    # "monte" : "monte carlo",
+    # "carlo" : "monte carlo",
+}
+
+items = ["title", "booktitle", "abstract", "keywords"]
+
+def clean(word_lists):
+    words = [
+        re.sub(r"[:,\.\-\"\s]*$", "", w.lower())
+        for word_list in word_lists
+        for w in word_list if w.lower() not in stop_words
+    ]
+    words = [custom_mappings.get(item, item) for item in words if len(item) > 1] # custom replacement
+    return words
+
+def extract_from_bib(file):
+    with open(file, encoding="utf8") as f:
+        s = str(f.read().encode("utf-8"))
+
+    itemlist = [" ".join(entry.split("\\n\\t")) for entry in s.split("\\n@")[1:]]
+
+    entries = []
+    for entry in itemlist:
+        entry_dict = {}
+        m1 = re.match(r"(?P<type>\w*){(?P<id>\S*),", entry)
+        if m1:
+            entry_dict["type"] = m1.group("type")
+            entry_dict["id"] = m1.group("id")
+        m2 = re.match(r".*title\s*=\s*{(?P<title>[\w\s\{\}\:\-\'\"]*),", entry)
+        if m2:
+            entry_dict["title"] = m2.group("title").replace("{", "").replace("}", "")
+        m3 = re.match(r".*abstract\s*=\s*{(?P<abstract>[\w\s\\n\\t\.\,]*)}", entry)
+        if m3:
+            entry_dict["abstract"] = m3.group("abstract").replace("{", "").replace("}", "") # remove curly brackets
+        m4 = re.match(r".*keywords\s*=\s*{(?P<keywords>[\w\,\s]*)}", entry)
+        if m4:
+            entry_dict["keywords"] = m4.group("keywords").replace("{", "").replace("}", "") # remove curly brackets
+        m5 = re.match(r".*booktitle\s*=\s*{(?P<booktitle>[\w\s\{\}\:\-\'\"]*),", entry)
+        if m5:
+            entry_dict["booktitle"] = m5.group("booktitle").replace("{", "").replace("}", "") # remove curly brackets
+
+        entries.append(entry_dict)
+
+    word_lists = [entry[item].split() for item in items for entry in entries if item in entry.keys()]
+    text = "\n".join(clean(word_lists))
+    return text
+
+def extract_from_pdf(file):
+    with open(file, "rb") as f:
+        word_lists = [p.extract_text().split() for p in PdfReader(f).pages]
+        text = "\n".join(clean(word_lists))
+        return text
+
+def extract_words(file):
+    if file.endswith(".bib"):
+        return extract_from_bib(file)
+    elif file.endswith(".pdf"):
+        return extract_from_pdf(file)
+    else:
+        print("Don't recognize file extension.")
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--fnames", type=str, help="filename(s) to extract words from", nargs='+')
+    parser.add_argument("--topwords", type=int, help="number of most frequent words to consider", default=200)
+    args = parser.parse_args()
+
+    text = "\n".join([extract_words(f) for f in args.fnames])
+
+    with open("text.txt", "w") as f:
+        f.write(text)
+
+    # Twitter header size: 1500px * 500px
+    W = 1500
+    H = 500
+
+    min_font_size = 5
+    max_font_size = H * .5
+    def color_func(*args, **kwargs):
+        font_size = kwargs["font_size"]
+        norm = np.log(font_size/min_font_size) / np.log(max_font_size/min_font_size)
+        cmap = plt.get_cmap("Blues")
+        r, g, b, a = cmap(norm)
+        return int(r*255), int(g*255), int(b*255)
+
+    # setting mask image
+    # mask = np.array(Image.open("./twitter_header.jpeg"))
+
+    # creating wordcloud
+    wordcloud = WordCloud(
+        # mask=mask,
+        width=W,
+        height=H,
+        color_func=color_func, # or colormap="Blues",
+        normalize_plurals=True,
+        collocations=True,
+        repeat=False,
+        contour_color="black",
+        max_words=args.topwords if args.topwords < len(text) else len(text),
+        relative_scaling="auto",
+        background_color="#ffffff",
+        min_font_size=min_font_size,
+        max_font_size=max_font_size,
+        font_step=1,
+        prefer_horizontal=.9,
+    ).generate(text)
+
+    # Optional: recolor the generated word cloud using colors sampled from a
+    # reference image. For best results, use an image close to W × H pixels.
+    # palette = np.array(Image.open("./palette.png").convert("RGB"))
+    # image_colors = ImageColorGenerator(palette)
+
+    px = 1 / plt.rcParams['figure.dpi'] # pixel in inches (https://matplotlib.org/stable/gallery/subplots_axes_and_figures/figure_size_units.html)
+    plt.figure(figsize=[W * px, H * px])
+    plt.imshow(
+        wordcloud, # or wordcloud.recolor(color_func=image_colors),
+        interpolation="bilinear"
+    )
+    plt.axis("off")
+
+    plt.tight_layout(pad=0.)
+    outfile = "wordcloud.png"
+    plt.savefig(outfile)
+
+    # save word counts
+    s = pd.Series(text.split("\n"))
+    s.value_counts().to_csv("counts.csv")

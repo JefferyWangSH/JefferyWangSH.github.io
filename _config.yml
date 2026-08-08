@@ -60,4 +60,5 @@ exclude:
   - LICENSE
   - minimal-light.gemspec
   - html_source_file/
-  - run_server.sh
+  - launch.sh
+  - zotero_wordcloud/
