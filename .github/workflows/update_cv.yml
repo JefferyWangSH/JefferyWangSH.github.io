@@ -1,4 +1,4 @@
-name: update CV from private repo
+name: update CV
 
 on:
   workflow_dispatch:
@@ -11,19 +11,19 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Checkout private CV repo
-        uses: actions/checkout@v4
+      - name: Checkout CV repository
+        uses: actions/checkout@v5
         with:
           repository: 'JefferyWangSH/cv'
           token: ${{ secrets.PAT }}
-          ref: 'tech-base'
+          ref: 'main'
           path: 'mycv'
 
       - name: Copy latest CV
         run: |
-          cp mycv/cv_tech_combined.pdf assets/files/cv.pdf
+          cp mycv/cv.pdf assets/files/cv.pdf
 
       - name: Commit and push changes
         run: |
