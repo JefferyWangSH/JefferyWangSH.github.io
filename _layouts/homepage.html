@@ -52,7 +52,7 @@
     <div class="topnav">
 
       {% if site.affiliation_link and site.affiliation_logo %}
-      <a href="{{ site.affiliation_link }}"><img width="30" src="{{ site.affiliation_logo }}"></a>
+      <a href="{{ site.affiliation_link }}"><img width="30" src="{{ site.affiliation_logo }}" decoding="async" alt=""></a>
       {% endif %}
 
       <div id="myLinks">
@@ -88,7 +88,7 @@
       <header>
         
         {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" fetchpriority="high" decoding="async" /></a>
         {% endif %}
 
         <h1>{{ site.title }}</h1>

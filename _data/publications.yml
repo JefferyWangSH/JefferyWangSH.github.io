@@ -6,7 +6,7 @@ main:
     journal: to appear
     url: tbd
     pdf: tbd
-    image: ./assets/img/covers/nga_bootstrap.png
+    image: ./assets/img/covers/nga_bootstrap.webp
 
   - title: Quantum geometric localization length and localization criticality in an ideally flat Chern band
     authors: <strong>Xu-Cheng Wang</strong>, Yang Qi*
@@ -14,7 +14,7 @@ main:
     journal: arXiv:2608.08042, (2026)
     url: https://arxiv.org/abs/2608.08042
     pdf: https://arxiv.org/pdf/2608.08042
-    image: ./assets/img/covers/topo_flatband_localization.png
+    image: ./assets/img/covers/topo_flatband_localization.webp
 
   - title: Emergent magnetic pseudogap from phase fluctuations and hierarchy of scales in two-dimensional superconductors
     authors: <strong>Xu-Cheng Wang</strong>, Yang Qi*
@@ -22,7 +22,7 @@ main:
     journal: 	arXiv:2608.07238, (2026)
     url: https://arxiv.org/abs/2608.07238
     pdf: https://arxiv.org/pdf/2608.07238
-    image: ./assets/img/covers/pdsc_mpg.png
+    image: ./assets/img/covers/pdsc_mpg.webp
 
   - title: 'The interplay of phase fluctuations and nodal quasiparticles: ubiquitous Fermi arcs in two-dimensional d-wave superconductors'
     authors: <strong>Xu-Cheng Wang</strong>, Xiao Yan Xu*, Yang Qi**
@@ -30,7 +30,7 @@ main:
     journal: 	Sci. Bull. <strong>71</strong>, 36-39, (2026)
     url: https://www.sciencedirect.com/science/article/pii/S2095927325011223
     pdf: https://arxiv.org/pdf/2310.05376
-    image: ./assets/img/covers/pdsc_fermi_arcs.png
+    image: ./assets/img/covers/pdsc_fermi_arcs.webp
 
   - title: Phase fluctuations in two-dimensional superconductors and pseudogap phenomenon
     authors: <strong>Xu-Cheng Wang</strong>, Yang Qi*
@@ -38,4 +38,4 @@ main:
     journal: Phys. Rev. B <strong>107</strong>, 224502, (2023)
     url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.224502
     pdf: https://arxiv.org/pdf/2212.05737
-    image: ./assets/img/covers/pdsc_pg.png
+    image: ./assets/img/covers/pdsc_pg.webp

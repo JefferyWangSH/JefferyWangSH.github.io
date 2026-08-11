@@ -170,7 +170,7 @@ if __name__ == "__main__":
     plt.axis("off")
 
     plt.tight_layout(pad=0.)
-    outfile = "wordcloud.png"
+    outfile = "wordcloud.webp"
     plt.savefig(outfile)
 
     # save word counts

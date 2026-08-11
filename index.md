@@ -7,7 +7,7 @@ layout: homepage
 ## About Me
 
 <div style="text-align: center;">
-  <img src="assets/img/wordcloud.png" alt="Research keyword word cloud" style="width: 95%; display: inline-block; margin-bottom: 20px;">
+  <img src="assets/img/wordcloud.webp" alt="Research keyword word cloud" style="width: 95%; display: inline-block; margin-bottom: 20px;" loading="lazy" decoding="async">
 </div>
 
 I am a PhD candidate in *condensed matter theory* at the Department of Physics, Fudan University.
