@@ -10,11 +10,21 @@
   }
 
   .topnav #myLinks {
-    display: inline;
+    display: flex;
+    float: right;
+    margin-right:30%;
   }
 
-  .topnav a.icon {
+  .topnav .icon {
     display: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
   }
 
   .topnav img {
@@ -23,7 +33,7 @@
   
   /* Style the links inside the navigation bar */
   .topnav a.normal {
-    float: right;
+    float: none;
     color: #f2f2f2;
     text-align: center;
     padding: 10px 9px;
@@ -37,10 +47,6 @@
     color: black;
   }
   
-  /* Add a color to the active/current link */
-  .topnav a.right {
-    margin-right:30%;
-  }
 
   @media print, screen and (max-width: 1000px) { 
 
@@ -48,7 +54,7 @@
         margin-left:3%;
       }
 
-    .topnav a.right {
+    .topnav #myLinks {
         margin-right:3%;
       }
 
@@ -63,7 +69,7 @@
     .topnav img {
         margin-left:6%;
       }
-    .topnav a.right {
+    .topnav #myLinks {
         margin-right:6%;
       }
 
@@ -74,7 +80,7 @@
     .topnav img {
         margin-left:12%;
       }
-    .topnav a.right {
+    .topnav #myLinks {
         margin-right:12%;
       }
 
@@ -86,7 +92,7 @@
     .topnav img {
         margin-left:16%;
       }
-    .topnav a.right {
+    .topnav #myLinks {
         margin-right:16%;
       }
 
@@ -97,7 +103,7 @@
     .topnav img {
         margin-left:19%;
       }
-    .topnav a.right {
+    .topnav #myLinks {
         margin-right:19%;
       }
 
@@ -108,7 +114,7 @@
     .topnav img {
         margin-left:22%;
       }
-    .topnav a.right {
+    .topnav #myLinks {
         margin-right:22%;
       }
 
@@ -124,6 +130,13 @@
    @media print, screen and (max-width: 960px) { 
     .topnav #myLinks {
         display: none;
+        float: none;
+        margin-right:0;
+        width:100%;
+      }
+
+      .topnav #myLinks.is-open {
+        display: block;
       }
 
       .topnav a.normal {
@@ -135,7 +148,7 @@
         display: block;
       }
 
-      .topnav a.icon {
+      .topnav .icon {
         color: white;
         display: block;
         padding: 10px 16px;
@@ -145,6 +158,12 @@
         right: 0;
         top: 0;
         margin-right:5%;
+        cursor: pointer;
+      }
+
+      .topnav .icon:focus-visible {
+        outline: 2px solid white;
+        outline-offset: -2px;
       }
 
       .topnav a.right {
@@ -157,4 +176,3 @@
         margin-right:0;
       }
    }
-   

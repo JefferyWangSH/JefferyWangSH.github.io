@@ -1,17 +1,16 @@
 main:
 
-  # - title: "Talks"
-  #  url: ./#invited-talks
-
-  # - title: "Teaching"
-  #  url: ./#teaching
-
-  - title: "CV"
-    url: ./assets/files/cv.pdf
-    right: true
+  - title: "Bio"
+    url: ./#about-me
 
   - title: "Publications"
     url: ./#publications
 
-  - title: "Bio"
-    url: ./#about-me
+  - title: "CV"
+    url: ./assets/files/cv.pdf
+
+  # - title: "Talks"
+  #   url: ./#invited-talks
+
+  # - title: "Teaching"
+  #   url: ./#teaching
