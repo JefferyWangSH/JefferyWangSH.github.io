@@ -2,8 +2,6 @@
 layout: homepage
 ---
 
-<h1 id="about-me"></h1>
-
 ## About Me
 
 <div style="text-align: center;">

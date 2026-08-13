@@ -34,25 +34,7 @@
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
     <link rel="stylesheet" href="./assets/css/navigation.css">
-
-    <script>
-      function setMenuOpen(isOpen) {
-        var links = document.getElementById("myLinks");
-        var toggle = document.querySelector(".topnav .icon");
-
-        links.classList.toggle("is-open", isOpen);
-        toggle.setAttribute("aria-expanded", String(isOpen));
-      }
-
-      function toggleNavigationMenu() {
-        var links = document.getElementById("myLinks");
-        setMenuOpen(!links.classList.contains("is-open"));
-      }
-
-      window.addEventListener("resize", function () {
-        if (window.innerWidth > 960) setMenuOpen(false);
-      });
-    </script>
+    <script src="./assets/js/navigation.js" defer></script>
 
   </head>
   <body>
@@ -67,7 +49,7 @@
       {% include navigation.md %}
       </div>
 
-      <button type="button" class="icon" onclick="toggleNavigationMenu()" aria-label="Toggle navigation" aria-controls="myLinks" aria-expanded="false">
+      <button type="button" class="icon" aria-label="Toggle navigation" aria-controls="myLinks" aria-expanded="false">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
       

@@ -1,11 +1,23 @@
+:root {
+    --topnav-bar-height: 46px;
+    --topnav-inset: 0px;
+  }
+
+  body {
+    padding-top: calc(var(--topnav-bar-height) + var(--topnav-inset));
+  }
+
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #002D72;
+    background: #002D72;
     overflow: hidden;
-    position: relative;
-    z-index:999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
     text-align: left;
-    width: 100%;
+    width: auto;
     margin: 0 auto;
   }
 
@@ -127,16 +139,45 @@
       }
    }
 
+   @media screen and (max-width: 960px) {
+    :root {
+        --topnav-bar-height: 44px;
+        --topnav-inset: 15px;
+      }
+
+    .topnav {
+        padding: var(--topnav-inset) var(--topnav-inset) 0;
+        background:
+            linear-gradient(#002D72 0 0) content-box,
+            #fff;
+        background-clip: content-box, border-box;
+      }
+   }
+
    @media print, screen and (max-width: 960px) { 
     .topnav #myLinks {
-        display: none;
+        display: block;
         float: none;
         margin-right:0;
         width:100%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition:
+            max-height 0.25s ease,
+            opacity 0.2s ease,
+            visibility 0s linear 0.25s;
       }
 
       .topnav #myLinks.is-open {
-        display: block;
+        max-height: var(--topnav-menu-height);
+        opacity: 1;
+        visibility: visible;
+        transition:
+            max-height 0.25s ease,
+            opacity 0.2s ease,
+            visibility 0s;
       }
 
       .topnav a.normal {
@@ -155,8 +196,8 @@
         font-size: 17px;
         position: absolute;
         float: right;
-        right: 0;
-        top: 0;
+        right: var(--topnav-inset);
+        top: var(--topnav-inset);
         margin-right:5%;
         cursor: pointer;
       }
@@ -176,3 +217,20 @@
         margin-right:0;
       }
    }
+
+  @media screen and (max-width: 960px) and (prefers-reduced-motion: reduce) {
+    .topnav #myLinks,
+    .topnav #myLinks.is-open {
+        transition: none;
+      }
+  }
+
+  @media print {
+    body {
+        padding-top: 0.4in;
+      }
+
+    .topnav {
+        position: static;
+      }
+  }

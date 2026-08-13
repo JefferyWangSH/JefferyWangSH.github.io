@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-bundle exec jekyll server --livereload
+bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload
