@@ -21,7 +21,7 @@
     margin: 0 auto;
   }
 
-  .topnav #myLinks {
+  .topnav #nav-menu {
     display: flex;
     float: right;
     margin-right:30%;
@@ -66,7 +66,7 @@
         margin-left:3%;
       }
 
-    .topnav #myLinks {
+    .topnav #nav-menu {
         margin-right:3%;
       }
 
@@ -81,7 +81,7 @@
     .topnav img {
         margin-left:6%;
       }
-    .topnav #myLinks {
+    .topnav #nav-menu {
         margin-right:6%;
       }
 
@@ -92,7 +92,7 @@
     .topnav img {
         margin-left:12%;
       }
-    .topnav #myLinks {
+    .topnav #nav-menu {
         margin-right:12%;
       }
 
@@ -104,7 +104,7 @@
     .topnav img {
         margin-left:16%;
       }
-    .topnav #myLinks {
+    .topnav #nav-menu {
         margin-right:16%;
       }
 
@@ -115,7 +115,7 @@
     .topnav img {
         margin-left:19%;
       }
-    .topnav #myLinks {
+    .topnav #nav-menu {
         margin-right:19%;
       }
 
@@ -126,7 +126,7 @@
     .topnav img {
         margin-left:22%;
       }
-    .topnav #myLinks {
+    .topnav #nav-menu {
         margin-right:22%;
       }
 
@@ -134,7 +134,7 @@
 
   
    @media print, screen and (max-width: 480px) { 
-    .topnav #myLinks {
+    .topnav #nav-menu {
         display: none;
       }
    }
@@ -155,7 +155,7 @@
    }
 
    @media print, screen and (max-width: 960px) { 
-    .topnav #myLinks {
+    .topnav #nav-menu {
         display: block;
         float: none;
         margin-right:0;
@@ -170,7 +170,7 @@
             visibility 0s linear 0.25s;
       }
 
-      .topnav #myLinks.is-open {
+      .topnav #nav-menu.is-open {
         max-height: var(--topnav-menu-height);
         opacity: 1;
         visibility: visible;
@@ -219,8 +219,8 @@
    }
 
   @media screen and (max-width: 960px) and (prefers-reduced-motion: reduce) {
-    .topnav #myLinks,
-    .topnav #myLinks.is-open {
+    .topnav #nav-menu,
+    .topnav #nav-menu.is-open {
         transition: none;
       }
   }
