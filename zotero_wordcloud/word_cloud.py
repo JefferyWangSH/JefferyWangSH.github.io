@@ -26,29 +26,11 @@ stop_words = [
 
     "method", "methods", "model", "models", "non-hermitian", "field",
     "states", "effect", "properties", "system", "systems",
-    ]
+]
 
 custom_mappings = {
-    # "studies": "study",
-    # '"music,music"' : "music",
-    # "musical" : "music",
-    # "harmonic" : "harmony",
-    # "music psychology" : "psychology",
-    # "music theory" : "theory",
-    # "music perception" : "perception",
-    # "music cognition" : "cognition",
-    # "cognitive" : "cognition",
-    # "modelling" : "modeling",
-    # "syntactic" : "syntax",
-    # "theory,music": "music theory",
-    # "theories" : "theory",
-    # "sciences" : "science",
-    # "melodies" : "melody",
-    # "concepts" : "concept",
-    # "nir" : "mir"
-
-    # "monte" : "monte carlo",
-    # "carlo" : "monte carlo",
+    # "monte": "monte carlo",
+    # "carlo": "monte carlo",
 }
 
 items = ["title", "booktitle", "abstract", "keywords"]

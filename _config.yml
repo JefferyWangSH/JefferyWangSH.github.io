@@ -1,21 +1,25 @@
 # Basic Information 
 title: Xu-Cheng Wang
 position: Ph.D. Candidate
-affiliation: Department of Physics, Fudan University, Shanghai, China
+affiliation: Department of Physics, Fudan University
 email: xuchengwang21 (at) m.fudan.edu.cn
-affiliation_link: https://jefferywangsh.github.io/
-affiliation_logo: ./assets/img/favicon_dark.png
+# affiliation_link: ...
+
+# Logo in the top navigation bar
+nav_logo: ./assets/img/favicon_dark.png
+nav_logo_link: ./
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: xucheng wang, xu-cheng wang, wang xucheng, wang xu-cheng, xcwang
-canonical: https://jefferywangsh.github.io/
-description: Xu-Cheng Wang is a PhD candidate, majoring in condensed matter theory, at the Department of Physics, Fudan University in Shanghai, China.
+keywords: xucheng wang, xu cheng wang, xu-cheng wang, wang xucheng, wang xu-cheng, xcwang, x.-c. wang, x. c. wang
+canonical: https://jefferywang.xyz
+description: Xu-Cheng Wang is a PhD candidate in condensed matter theory at the Department of Physics, Fudan University.
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 cv_link: ./assets/files/cv.pdf
 google_scholar: https://scholar.google.com/citations?user=aK9x54UAAAAJ
+orcid: https://orcid.org/0000-0002-8651-3995
 github_link: https://github.com/JefferyWangSH
 # linkedin: https://www.linkedin.com/
 # twitter: https://twitter.com/

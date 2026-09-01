@@ -3,4 +3,5 @@ __pycache__/
 library.bib
 text.txt
 counts.csv
-wordcloud.png
+*.png
+*.webp

@@ -198,7 +198,7 @@
         float: right;
         right: var(--topnav-inset);
         top: var(--topnav-inset);
-        margin-right:5%;
+        margin-right:2%;
         cursor: pointer;
       }
 

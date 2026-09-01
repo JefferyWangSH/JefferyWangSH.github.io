@@ -1,6 +1,13 @@
 <h1 id="publications"></h1>
 
-<h2 style="margin: 2px 0px -15px;">Publications <temp style="font-size:15px;">[</temp><a href="https://scholar.google.com/citations?user=aK9x54UAAAAJ" target="_blank" style="font-size:15px;">Google Scholar</a><temp style="font-size:15px;">]</temp><temp style="font-size:15px;">[</temp><a href="https://orcid.org/0000-0002-8651-3995" target="_blank" style="font-size:15px;">ORCID</a><temp style="font-size:15px;">]</temp></h2>
+<h2 style="margin: 2px 0px -15px;">Publications
+  {% if site.google_scholar %}
+  <temp style="font-size:15px;">[</temp><a href="{{ site.google_scholar }}" target="_blank" rel="noopener noreferrer" style="font-size:15px;">Google Scholar</a><temp style="font-size:15px;">]</temp>
+  {% endif %}
+  {% if site.orcid %}
+  <temp style="font-size:15px;">[</temp><a href="{{ site.orcid }}" target="_blank" rel="noopener noreferrer" style="font-size:15px;">ORCID</a><temp style="font-size:15px;">]</temp>
+  {% endif %}
+</h2>
 
 <div class="publications">
 <ol class="bibliography">

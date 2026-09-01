@@ -41,8 +41,14 @@
 
     <div class="topnav">
 
-      {% if site.affiliation_link and site.affiliation_logo %}
-      <a href="{{ site.affiliation_link }}"><img width="30" src="{{ site.affiliation_logo }}" decoding="async" alt=""></a>
+      {% if site.nav_logo %}
+        {% if site.nav_logo_link %}
+        <a href="{{ site.nav_logo_link }}" aria-label="{{ site.title }} home">
+        {% endif %}
+        <img width="30" src="{{ site.nav_logo }}" decoding="async" alt="{{ site.title }} logo">
+        {% if site.nav_logo_link %}
+        </a>
+        {% endif %}
       {% endif %}
 
       <div id="nav-menu">
@@ -88,7 +94,11 @@
         <br>
         {% endif %}
         {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
+          {% if site.affiliation_link %}
+          <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
+          {% else %}
+          <autocolor>{{ site.affiliation }}</autocolor>
+          {% endif %}
         <br>
         {% endif %}
         {% if site.email %}

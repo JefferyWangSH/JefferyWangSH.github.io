@@ -6,6 +6,7 @@ main:
     journal: to appear
     url: tbd
     pdf: tbd
+    code: https://github.com/JefferyWangSH/QMBBoot-NGA
     image: ./assets/img/covers/nga_bootstrap.webp
 
   - title: Quantum geometric localization length and localization criticality in an ideally flat Chern band
