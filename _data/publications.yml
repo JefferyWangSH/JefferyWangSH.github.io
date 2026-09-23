@@ -3,9 +3,9 @@ main:
   - title: Nullspace-guided adaptive bootstrap of quantum many-body systems
     authors: <strong>Xu-Cheng Wang</strong>, Yang Qi*
     journal_short: arXiv
-    journal: to appear
-    url: tbd
-    pdf: tbd
+    journal: arXiv:2609.25834, (2026)
+    url: https://arxiv.org/abs/2609.25834
+    pdf: https://arxiv.org/pdf/2609.25834
     code: https://github.com/JefferyWangSH/QMBBoot-NGA
     image: ./assets/img/covers/nga_bootstrap.webp
 
@@ -20,7 +20,7 @@ main:
   - title: Emergent magnetic pseudogap from phase fluctuations and hierarchy of scales in two-dimensional superconductors
     authors: <strong>Xu-Cheng Wang</strong>, Yang Qi*
     journal_short: arXiv
-    journal: 	arXiv:2608.07238, (2026)
+    journal: arXiv:2608.07238, (2026)
     url: https://arxiv.org/abs/2608.07238
     pdf: https://arxiv.org/pdf/2608.07238
     image: ./assets/img/covers/pdsc_mpg.webp
@@ -28,7 +28,7 @@ main:
   - title: 'The interplay of phase fluctuations and nodal quasiparticles: ubiquitous Fermi arcs in two-dimensional d-wave superconductors'
     authors: <strong>Xu-Cheng Wang</strong>, Xiao Yan Xu*, Yang Qi**
     journal_short: Sci. Bull.
-    journal: 	Sci. Bull. <strong>71</strong>, 36-39, (2026)
+    journal: Sci. Bull. <strong>71</strong>, 36-39, (2026)
     url: https://www.sciencedirect.com/science/article/pii/S2095927325011223
     pdf: https://arxiv.org/pdf/2310.05376
     image: ./assets/img/covers/pdsc_fermi_arcs.webp
